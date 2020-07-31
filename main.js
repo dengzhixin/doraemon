@@ -17,14 +17,20 @@ const player = {
         '#btnReload':'reload'
     },
     ui:{
-        style : document.querySelector('#style'),
+        style : undefined,
         code : document.querySelector('#code')
     },
     init: () => {
+        player.initStyleUI()
         player.play()
         player.bindEvents()
     },
-
+    initStyleUI(){
+        let dom =document.createElement('style')
+        dom.id='style'
+        player.ui.style = dom
+        document.head.appendChild(dom)
+    },
     bindEvents:()=>{
         for (let key in player.events) {
             document.querySelector(key).onclick=player[player.events[key]]
