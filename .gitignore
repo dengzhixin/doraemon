@@ -1,5 +1,4 @@
 .cache
 .idea
-dist
 .git
 node_modules
