@@ -43,20 +43,15 @@ const player = {
             player.pause()
             return
         }
-        console.log( player.ui)
         player.ui.style.innerHTML = string.substring(0, player.n)
         player.ui.code.innerText = string.substring(0, player.n)
         player.ui.code.scrollTop = player.ui.code.scrollHeight
     },
     play: () => {
-        console.log('play')
         player.pause()
         player.id = setInterval(player.run, player.speed)
-        console.log(player.id )
     },
     pause: () => {
-        console.log('pause')
-        console.log(player.id );
         clearInterval(player.id)
     },
     slow:()=>{
