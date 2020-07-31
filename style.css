@@ -1,34 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::before, *::after {
-    box-sizing: border-box;
-}
-
-.xCenter {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #d5ecf9;
-}
-
 .box {
-    animation: do 500ms linear;
+    /*animation: do 500ms linear;*/
     animation-fill-mode: forwards;
+    position:fixed;
+    top:100px;
+    right:10px
 }
 
-@keyframes do {
+@keyframes flyIn {
     from {
         transform: translateY(100px)
     }
@@ -438,20 +416,7 @@ body {
 
 }
 
-.hand.right .sayHi {
-    position: relative;
-    width: 160px;
-    border: 2px solid white;
-    top: -150px;
-    left: 50px;
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px solid #000;
-    background-color: white;
-    opacity: 0;
-    animation: sayHi 1s linear 1s;
-    animation-fill-mode: forwards;
-}
+
 @media (max-width:500px) {
     .hand.right .sayHi{
         top: -320px;
@@ -486,7 +451,6 @@ body {
     display: block;
     width: 70px;
     height: 80px;
-    border: 1px solid red;
     background-color: #3ca2c7;
     position: relative;
     z-index: -1;

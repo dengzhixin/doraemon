@@ -1,42 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*::before, *::after {
-    box-sizing: border-box;
-}
-
-.xCenter {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #d5ecf9;
-}
-
-.box {
-    animation: do 500ms linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes do {
-    from {
-        transform: translateY(100px)
-    }
-    to {
-        transform: translateY(-50px)
-    }
-}
-
+let string = `
 .head {
     width: 200px;
     height: 200px;
@@ -45,60 +7,6 @@ body {
     border: 2px solid #000;
     position: relative;
     z-index: 10;
-}
-
-.head .fly {
-    width: 100px;
-    height: 40px;
-    position: relative;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.head .fly .leaf {
-    width: 60px;
-    height: 5px;
-    background-color: rgba(162, 171, 176, 0.6);
-    position: absolute;
-    top: 28px;
-    left: 20px;
-    z-index: 1;
-    transform: translateX(-50%);
-    animation: fly 200ms linear infinite;
-}
-
-@keyframes fly {
-    0% {
-        transform: rotate3d(0, 1, 0, 0deg);
-    }
-    100% {
-        transform: rotate3d(0, 1, 0, 360deg);
-    }
-
-}
-
-.head .fly .bracket {
-    position: absolute;
-    left: 50%;
-    background-color: #fbc046;
-    transform: translateX(-50%);
-    border: 2px solid #000000;
-}
-
-.head .fly .bracket.up {
-    width: 20px;
-    height: 12px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    top: 16px;
-}
-
-.head .fly .bracket.down {
-    bottom: 0;
-    width: 8px;
-    height: 12px;
-
 }
 
 .head .face {
@@ -192,7 +100,13 @@ body {
     top: 78px;
     z-index: 1;
 }
-
+.head .beards .beard {
+    width: 60px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    /*z-index: 1;*/
+}
 .head .beards::after {
     content: '';
     display: block;
@@ -218,19 +132,12 @@ body {
     left: 30px;
 }
 
-.head .beards .beard {
-    width: 60px;
-    height: 2px;
-    background-color: #000;
-    position: absolute;
-    /*z-index: 1;*/
-}
+
 
 .head .beards .left .beard:nth-child(1) {
     top: 16px;
     transform: rotate(18deg);
 }
-
 
 .head .beards .left .beard:nth-child(2) {
     top: 34px;
@@ -438,26 +345,8 @@ body {
 
 }
 
-.hand.right .sayHi {
-    position: relative;
-    width: 160px;
-    border: 2px solid white;
-    top: -150px;
-    left: 50px;
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px solid #000;
-    background-color: white;
-    opacity: 0;
-    animation: sayHi 1s linear 1s;
-    animation-fill-mode: forwards;
-}
-@media (max-width:500px) {
-    .hand.right .sayHi{
-        top: -320px;
-        left: -60px;
-    }
-}
+
+
 
 @keyframes sayHi {
     from {
@@ -529,4 +418,72 @@ body {
 
 }
 
-/*# sourceMappingURL=style.e308ff8e.css.map */
+.head .fly {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.head .fly .leaf {
+    width: 60px;
+    height: 5px;
+    background-color: rgba(162, 171, 176, 0.6);
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    z-index: 1;
+    transform: translateX(-50%);
+    animation: fly 200ms linear infinite;
+}
+
+.head .fly .bracket {
+    position: absolute;
+    left: 50%;
+    background-color: #fbc046;
+    transform: translateX(-50%);
+    border: 2px solid #000000;
+}
+
+.head .fly .bracket.up {
+    width: 20px;
+    height: 12px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    top: 16px;
+}
+
+.head .fly .bracket.down {
+    bottom: 0;
+    width: 8px;
+    height: 12px;
+
+}
+@keyframes flyIn {
+    from {
+        transform: translateY(100px)
+    }
+    to {
+        transform: translateY(-50px)
+    }
+}
+@keyframes fly {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+
+}
+@media (max-width:500px) {
+    .hand.right .sayHi{
+        top: -320px;
+        left: -60px;
+    }
+}
+
+`
+export default string
