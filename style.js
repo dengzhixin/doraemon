@@ -480,7 +480,7 @@ let string = `
 }
 @media (max-width:500px) {
     .hand.right .sayHi{
-        top: -320px;
+        top: -340px;
         left: -60px;
     }
 }
