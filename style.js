@@ -461,6 +461,7 @@ let string = `
     height: 12px;
 
 }
+
 @keyframes flyIn {
     from {
         transform: translateY(100px)
@@ -468,6 +469,9 @@ let string = `
     to {
         transform: translateY(-50px)
     }
+}
+.box{
+    animation : flyIn 400ms 
 }
 @keyframes fly {
     0% {
@@ -480,7 +484,7 @@ let string = `
 }
 @media (max-width:500px) {
     .hand.right .sayHi{
-        top: -340px;
+        top: -320px;
         left: -60px;
     }
 }
