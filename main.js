@@ -37,6 +37,7 @@ const player = {
             player.pause()
             return
         }
+        console.log( player.ui)
         player.ui.style.innerHTML = string.substring(0, player.n)
         player.ui.code.innerText = string.substring(0, player.n)
         player.ui.code.scrollTop = player.ui.code.scrollHeight
