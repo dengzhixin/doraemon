@@ -417,6 +417,12 @@ let string = `
     margin-left: 20px;
 
 }
+@media (max-width:500px) {
+    .hand.right .sayHi{
+        top: -320px;
+        left: -60px;
+    }
+}
 
 .head .fly {
     width: 100px;
@@ -481,12 +487,6 @@ let string = `
         transform: rotate3d(0, 1, 0, 360deg);
     }
 
-}
-@media (max-width:500px) {
-    .hand.right .sayHi{
-        top: -320px;
-        left: -60px;
-    }
 }
 
 `

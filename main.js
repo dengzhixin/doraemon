@@ -18,7 +18,8 @@ const player = {
     },
     ui:{
         style : undefined,
-        code : document.querySelector('#code')
+        code : document.querySelector('#code'),
+        range:document.querySelector('#range')
     },
     init: () => {
         player.initStyleUI()
@@ -30,22 +31,28 @@ const player = {
         dom.id='style'
         player.ui.style = dom
         document.head.appendChild(dom)
+        player.ui.range.max = string.length
     },
     bindEvents:()=>{
         for (let key in player.events) {
             document.querySelector(key).onclick=player[player.events[key]]
         }
+        document.querySelector('#range').addEventListener('input',player.change)
+
+
     }
     ,
     run: () => {
-        player.n += 1
         if (player.n > string.length) {
             player.pause()
             return
         }
+        player.n += 1
+
         player.ui.style.innerHTML = string.substring(0, player.n)
         player.ui.code.innerText = string.substring(0, player.n)
         player.ui.code.scrollTop = player.ui.code.scrollHeight
+        player.ui.range.value=player.n
     },
     play: () => {
         player.pause()
@@ -71,6 +78,11 @@ const player = {
         // player.ui.code.innerText =''
         // player.ui.code.scrollTop =0
         player.n=0
+        player.play()
+    },
+    change:()=>{
+        console.log(player.ui.range.value);
+        player.n=parseInt(player.ui.range.value)
         player.play()
     }
 
