@@ -14,3 +14,9 @@ yarn start
 ```$xslt
 yarn build
 ```
+## 其他
+* 画出一个太极图
+[GitHub仓库](https://github.com/dengzhixin/Tai-Chi)
+[GitHub预览](https://dengzhixin.github.io/Tai-Chi/)
+[Gitee仓库](https://github.com/dengzhixin/Tai-Chi)
+[Gitee预览](https://dengzhixin.gitee.io/tai-chi/)
