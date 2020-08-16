@@ -1,2 +1,172 @@
-<!doctype html><html lang="zh_CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>哆啦A梦</title><style>*{margin:0;padding:0;box-sizing:border-box}button{cursor:pointer}:after,:before{box-sizing:border-box}body{max-height:100vh;background-color:#d5ecf9;overflow-y:auto;display:flex;justify-content:center;align-items:center}#code{width:100vw;height:calc(100vh - 20px);overflow:auto;padding:10px;word-break:break-all}.xCenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.hand.right .sayHi{position:relative;width:160px;top:-150px;left:50px;padding:10px;border-radius:20px;border:2px solid #000;background-color:#fff;opacity:0;animation:sayHi 1s linear 1s;animation-fill-mode:forwards}.box{animation-fill-mode:forwards;top:100px;right:40vw}.box,.buttons{position:fixed}.buttons{top:10px;right:10px;z-index:2}@media (max-width:500px){.box{right:80px;top:180px}#code{position:fixed;left:0;top:0}}</style></head><body> <div class="buttons"> <button id="btnPause">暂停</button> <button id="btnPlay">播放</button> <button id="btnSlow">慢速</button> <button id="btnNormal">中速</button> <button id="btnFast">快速</button> <button id="btnReload">重播</button> <br> <input id="range" type="range"> </div> <div id="code"></div> <div class="box"> <div class="head"> <div class="fly"> <div class="leaf"></div> <div class="bracket up"></div> <div class="bracket down"></div> </div> <div class="face xCenter"> <div class="eye left"> <div class="black"></div> </div> <div class="eye right"> <div class="black"></div> </div> <div class="nose xCenter"></div> <div class="beards xCenter"> <div class="left"> <div class="beard"></div> <div class="beard"></div> <div class="beard"></div> </div> <div class="right"> <div class="beard"></div> <div class="beard"></div> <div class="beard"></div> </div> </div> <div class="mouth"> <div class="heart"> <div class="left"></div> <div class="right"></div> <div class="bottom"></div> </div> </div> </div> </div> <div class="body"> <div class="bg"> </div> <div class="whiteBox xCenter"> <div class="pocket"></div> </div> </div> <div> <div class="weibo"> <div class="dd"></div> <div class="kd"></div> </div> </div> <div class="hand left"> <div class="circle"> </div> </div> <div class="hand right"> <div class="circle"> </div> <div class="sayHi"> 初次见面，你们好！我叫哆啦A梦，今后麻烦你们多多照顾了 </div> </div> <div class="foot left"> </div> <div class="foot right"></div> <script src="main.5e30095f.js"></script> </div>
-</body></html>
+<!doctype html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>哆啦A梦</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            cursor: pointer;
+        }
+        *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            max-height: 100vh;
+            background-color: #d5ecf9;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #code{
+            width: 100vw;
+            height: calc(100vh - 20px);
+            overflow: auto;
+            padding: 10px;
+            word-break: break-all;
+
+        }
+        .xCenter {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hand.right .sayHi {
+            position: relative;
+            width: 160px;
+            border: 2px solid white;
+            top: -150px;
+            left: 50px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 2px solid #000;
+            background-color: white;
+            opacity: 0;
+            animation: sayHi 1s linear 1s;
+            animation-fill-mode: forwards;
+        }
+        .box {
+            /*animation: do 500ms linear;*/
+            animation-fill-mode: forwards;
+            position:fixed;
+            top:100px;
+            right:40vw;
+        }
+        .buttons{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+        #range{
+            margin-top: 10px;
+        }
+        @media  (max-width:500px)  {
+            .box {
+                right:80px;
+                top:180px;
+            }
+            #code{
+                position: fixed;
+                left: 0;
+                top: 0;
+                /*top: calc(10vw + 400px);*/
+                /*width: 100%;*/
+                /*height: 100%;*/
+                /*height: calc(100vh - 10vw - 420px);*/
+                /*padding-top: 10vw;*/
+            }
+        }</style>
+</head>
+<body>
+
+    <div class="buttons">
+        <button id="btnPause">暂停</button>
+        <button id="btnPlay">播放</button>
+        <button id="btnSlow">慢速</button>
+        <button id="btnNormal">中速</button>
+        <button id="btnFast">快速</button>
+        <button id="btnReload">重播</button>
+        <br>
+        <input id="range" type="range">
+
+    </div>
+    <div id="code"></div>
+    <div class="box">
+        <div class="head">
+            <div class="fly">
+                <div class="leaf"></div>
+                <div class="bracket up"></div>
+                <div class="bracket down"></div>
+
+            </div>
+            <div class="face xCenter">
+                <div class="eye left">
+                    <div class="black"></div>
+                </div>
+                <div class="eye right">
+                    <div class="black"></div>
+
+                </div>
+                <div class="nose xCenter"></div>
+                <div class="beards xCenter">
+                    <div class="left">
+                        <div class="beard"></div>
+                        <div class="beard"></div>
+                        <div class="beard"></div>
+                    </div>
+                    <div class="right">
+                        <div class="beard"></div>
+                        <div class="beard"></div>
+                        <div class="beard"></div>
+                    </div>
+                </div>
+
+                <div class="mouth">
+                    <div class="heart">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                        <div class="bottom"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="bg">
+            </div>
+            <div class="whiteBox xCenter">
+                <div class="pocket"></div>
+            </div>
+        </div>
+        <div>
+            <div class="weibo">
+                <div class="dd"></div>
+                <div class="kd"></div>
+            </div>
+
+        </div>
+
+        <div class="hand left">
+            <div class="circle">
+            </div>
+        </div>
+        <div class="hand right">
+            <div class="circle">
+            </div>
+        </div>
+        <div class="foot left">
+        </div>
+        <div class="foot right"></div>
+        <script src="/main.1f19ae8e.js"></script>
+    </div>
+</body>
+</html>

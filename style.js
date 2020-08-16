@@ -345,18 +345,6 @@ let string = `
 
 }
 
-
-
-
-@keyframes sayHi {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .hand.right {
     margin-left: 125px;
 }
@@ -417,12 +405,7 @@ let string = `
     margin-left: 20px;
 
 }
-@media (max-width:500px) {
-    .hand.right .sayHi{
-        top: -320px;
-        left: -60px;
-    }
-}
+
 
 .head .fly {
     width: 100px;

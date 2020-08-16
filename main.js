@@ -81,7 +81,6 @@ const player = {
         player.play()
     },
     change:()=>{
-        console.log(player.ui.range.value);
         player.n=parseInt(player.ui.range.value)
         player.play()
     }
